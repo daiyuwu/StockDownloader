@@ -1,0 +1,16 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.8.10'
+}
+
+group 'org.ty'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation("com.mysql:mysql-connector-j:9.2.0")
+    implementation("yfinance:yfinance:0.2.0")
+}
