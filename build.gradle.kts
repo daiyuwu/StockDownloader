@@ -2,6 +2,7 @@ plugins {
     java
     kotlin("jvm") version "1.8.10"
     application
+    kotlin("plugin.serialization") version "1.9.0" // ✅ 這行很重要！
 }
 
 group = "org.ty"
@@ -26,8 +27,8 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib")
-    implementation("com.mysql:mysql-connector-j:9.2.0")
-    implementation(files("lib/yfinance4j-0.1.7.jar"))
-//    implementation("io.github.tekichan:yfinance4j:0.1.7")
+    implementation("org.slf4j:slf4j-simple:2.0.9") // SLF4J 簡單日誌實作
+    implementation("io.ktor:ktor-client-cio:2.3.0")
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
 }
